@@ -6,29 +6,35 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>カードUIがスライドイン</title>
     <meta name="description" content="カード形式UIパーツが順に表示される。">
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<div class="wp-starOrbit01">
-	<div class="box-starOrbit scrollAnimation">
-		<img class="img-star" src="star.svg" align="星" width="20%" height="">
-		<img class="img-star" src="star.svg" align="星" width="24%" height="">
-		<img class="img-star" src="star.svg" align="星" width="28%" height="">
-		<img class="img-star" src="star.svg" align="星" width="34%" height="">
-		<img class="img-star" src="star.svg" align="星" width="40%" height="">
-	</div><!-- /.box-starOrbit -->
-</div><!-- /.box-section01 -->
+<ul class="list-application scrollAnimation">
+	<li class="item-application">
+		<span class="txt-applicationSub">STEP 01</span>
+		<dl class="data-application">
+			<dt class="ttl-application">フォローする</dt>
+			<dd class="txt-application">ああああああああああああああ。<br>
+			あああああ。</dd>
+		</dl><!-- /.data-application -->
+	</li><!-- /.item-application -->
+	
+	<li class="item-application">
+		<span class="txt-applicationSub">STEP 02</span>
+		<dl class="data-application">
+			<dt class="ttl-application">リツイートする</dt>
+			<dd class="txt-application">いいい。<br>
+			いいいいいいいいいいいいい。</dd>
+		</dl><!-- /.data-application -->
+	</li><!-- /.item-application -->
 
-<div class="wp-starOrbit02">
-	<div class="box-starOrbit box-starOrbit--flip scrollAnimation">
-		<img class="img-star" src="star.svg" align="星" width="20%" height="">
-		<img class="img-star" src="star.svg" align="星" width="24%" height="">
-		<img class="img-star" src="star.svg" align="星" width="28%" height="">
-		<img class="img-star" src="star.svg" align="星" width="34%" height="">
-		<img class="img-star" src="star.svg" align="星" width="40%" height="">
-	</div><!-- /.box-starOrbit -->
-</div><!-- /.box-section02 -->
+	<li class="item-application">
+		<p class="txt-applicationEnd">うううう！</p>
+	</li><!-- /.item-application -->
+
+</ul><!-- /.list-application -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
