@@ -1,0 +1,62 @@
+.list-application {
+	width: 836px;
+	margin: 30px auto 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-application {
+	width: 266px;
+	text-align: center;
+	background-color: #fffce0;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .4);
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+@keyframes slideInCard {
+	0% {
+		opacity: 0;
+		transform: translateX(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.scrollAnimationActive .item-application {
+	animation-name: slideInCard;
+	animation-duration: .3s;
+	animation-fill-mode: both;
+	animation-timing-function: ease;
+}
+
+.item-application:nth-child(1) {
+	animation-delay: .5s;
+}
+
+.item-application:nth-child(2) {
+	animation-delay: .8s;
+}
+
+.item-application:nth-child(3) {
+	animation-delay: 1.4s;
+}
+
+.txt-applicationSub {
+	display: block;
+	text-align: center;
+	width: 100px;
+	position: absolute;
+	top: -6px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.ttl-application {
+	margin: 30px 0 10px;
+}
