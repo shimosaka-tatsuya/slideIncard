@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>カードUIがスライドイン</title>
+    <meta name="description" content="カード形式UIパーツが順に表示される。">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="wp-starOrbit01">
+	<div class="box-starOrbit scrollAnimation">
+		<img class="img-star" src="star.svg" align="星" width="20%" height="">
+		<img class="img-star" src="star.svg" align="星" width="24%" height="">
+		<img class="img-star" src="star.svg" align="星" width="28%" height="">
+		<img class="img-star" src="star.svg" align="星" width="34%" height="">
+		<img class="img-star" src="star.svg" align="星" width="40%" height="">
+	</div><!-- /.box-starOrbit -->
+</div><!-- /.box-section01 -->
+
+<div class="wp-starOrbit02">
+	<div class="box-starOrbit box-starOrbit--flip scrollAnimation">
+		<img class="img-star" src="star.svg" align="星" width="20%" height="">
+		<img class="img-star" src="star.svg" align="星" width="24%" height="">
+		<img class="img-star" src="star.svg" align="星" width="28%" height="">
+		<img class="img-star" src="star.svg" align="星" width="34%" height="">
+		<img class="img-star" src="star.svg" align="星" width="40%" height="">
+	</div><!-- /.box-starOrbit -->
+</div><!-- /.box-section02 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(window).load(function() {
+	var scroll = $(window).scrollTop(); //スクロールの位置を取得
+	var windowHeight = $(window).height(); //ウィンドウの高さを取得
+	
+	// スクロールイベントの初期値
+	$(".scrollAnimation").each(function(){
+		var position = $(this).offset().top; //ページの一番上から要素までの距離を取得
+		var minusValue = windowHeight - 96 ;
+
+		if (scroll > position - minusValue){ //スクロール位置が要素の位置を過ぎたとき
+			$(this).addClass('scrollAnimationActive'); //クラス「animationSlideInThumbnail-active」を与える
+		} else if (position - windowHeight > scroll) {
+			$(this).removeClass('scrollAnimationActive'); //クラス「animationSlideInThumbnail-active」を削除
+		} else if(scroll == 0) {
+			$(this).removeClass('scrollAnimationActive'); //クラス「animationSlideInThumbnail-active」を削除
+		}
+	});
+	
+	// スクロールイベント
+	$(window).scroll(function (){
+		var scroll = $(window).scrollTop(); //スクロールの位置を取得
+		var windowHeight = $(window).height(); //ウィンドウの高さを取得
+		
+		$(".scrollAnimation").each(function(){
+			var position = $(this).offset().top; //ページの一番上から要素までの距離を取得
+			var minusValue = windowHeight - 96 ;
+	
+			if (scroll > position - minusValue){ //スクロール位置が要素の位置を過ぎたとき
+				$(this).addClass('scrollAnimationActive'); //クラス「animationSlideInThumbnail-active」を与える
+			} else if (position - windowHeight > scroll) {
+				$(this).removeClass('scrollAnimationActive'); //クラス「animationSlideInThumbnail-active」を削除
+			} else if(scroll == 0) {
+				$(this).removeClass('scrollAnimationActive'); //クラス「animationSlideInThumbnail-active」を削除
+			}
+		});
+	});
+});
+</script>
+</body>
+</html>
